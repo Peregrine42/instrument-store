@@ -1,3 +1,3 @@
 class Instrument < ActiveRecord::Base
-  belongs_to :warehouse
+  has_many :stock
 end

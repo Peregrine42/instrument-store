@@ -23,7 +23,7 @@ Given(/^there is an instrument that has several locations$/) do
 end
 
 When(/^I visit the details page for an instrument$/) do
-  visit "/instrument/1"
+  visit "/instruments/1"
 end
 
 Then(/^I see the instrument's locations$/) do
