@@ -8,3 +8,8 @@ Feature: showing where an instrument is
     When I visit the details page for an instrument
     Then I see the instrument's locations
     And I see the instrument's stock levels
+  
+  Scenario: show locations of stock in the same warehouse
+    Given there are two instrument stocks at the same warehouse
+    When I visit the details page for an instrument
+    Then I see the shelf number for each instrument
