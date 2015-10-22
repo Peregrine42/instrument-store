@@ -11,6 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151022103754) do
+
+  create_table "instruments", force: :cascade do |t|
+    t.integer "warehouse_id"
+  end
+
+  add_index "instruments", ["warehouse_id"], name: "index_instruments_on_warehouse_id"
+
+  create_table "warehouses", force: :cascade do |t|
+    t.string "name"
+  end
 
 end
