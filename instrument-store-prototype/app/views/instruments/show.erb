@@ -1,6 +1,7 @@
-<h1>Instrument <%= @instrument.id %></h1>
+<h1><%= @instrument.name %></h1>
 <p>This instrument is located at:</p>
 <% @instrument.stock.each do |stock| %>
-  <p><%= stock.warehouse.name %>: <%= stock.amount %> in stock, 
-    shelf <%= stock.shelf_id %></p>
+  <p><%= stock.warehouse.name %>, shelf <%= stock.shelf_id %>:
+    <%= stock.amount %> in stock</p>
 <% end %>
+<p>Total: <%=  @instrument.stock_total %></p>

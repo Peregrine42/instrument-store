@@ -9,13 +9,13 @@ w3 = Warehouse.create! name: "third warehouse"
 
 i1 = Instrument.create!
 
-s1 = Stock.create! amount: 5
-s2 = Stock.create! amount: 3
+s1 = Stock.create! amount: 5, shelf_id: "d4"
+s2 = Stock.create! amount: 3, shelf_id: "a1"
 
 s1.instrument = i1
 s2.instrument = i1
 s1.warehouse = w1
-s2.warehouse = w2
+s2.warehouse = w1
 
 [w1, w2, w3, i1, s1, s2].each do |i|
   i.save!

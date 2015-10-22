@@ -11,9 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022133254) do
+ActiveRecord::Schema.define(version: 20151022140806) do
 
   create_table "instruments", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "stocks", force: :cascade do |t|
